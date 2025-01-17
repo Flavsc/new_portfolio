@@ -1,0 +1,40 @@
+@mixin glass-effect {
+    background: $gradient-glass;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba($white, 0.1);
+    border-radius: $border-radius;
+}
+
+@mixin hover-lift {
+    transition:
+        transform $transition-fast,
+        box-shadow $transition-fast;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-md;
+    }
+}
+
+@mixin fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity $transition-medium,
+        transform $transition-medium;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin tilt-effect {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform $transition-fast;
+
+    &:hover {
+        transform: rotateX(5deg) rotateY(5deg);
+    }
+}

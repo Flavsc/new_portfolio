@@ -1,0 +1,221 @@
+@import "../variables";
+
+.navbar {
+    padding: $spacing-sm 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        background: rgba($primary-black, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+    }
+
+    .logo {
+        .logo-text {
+            font-family: $font-secondary;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: $spacing-xl;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            &.desktop-only {
+                display: none;
+            }
+        }
+
+        .nav-link {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: $spacing-xs $spacing-sm;
+            position: relative;
+            transition: all 0.3s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: $primary-pink;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: $primary-pink;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .nav-actions {
+        display: flex;
+        gap: $spacing-md;
+        align-items: center;
+
+        .desktop-only {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            padding: 0;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        .auth-button {
+            background: transparent;
+            border: 2px solid $primary-pink;
+            color: $white;
+            padding: $spacing-xs $spacing-md;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $primary-pink;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px -5px rgba($primary-pink, 0.5);
+            }
+        }
+
+        .nav-icon {
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $primary-pink;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    // Mobile Menu
+    .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba($primary-black, 0.98);
+        backdrop-filter: blur(10px);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+
+        &.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: $spacing-xl;
+            gap: $spacing-xl;
+
+            .nav-link {
+                color: $white;
+                text-decoration: none;
+                font-size: 1.3rem;
+                font-weight: 500;
+                padding: $spacing-xs $spacing-sm;
+                position: relative;
+                transition: all 0.3s ease;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: $primary-pink;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: $primary-pink;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mobile-actions {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: $spacing-lg;
+                margin-top: $spacing-lg;
+                width: 100%;
+
+                .mobile-icons {
+                    display: flex;
+                    gap: $spacing-xl;
+                }
+            }
+        }
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(
+        to right,
+        $white 20%,
+        $primary-pink 40%,
+        $primary-pink 60%,
+        $white 80%
+    );
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}

@@ -1,0 +1,92 @@
+@import "../variables";
+
+.footer {
+    background-color: $gray;
+    padding: $spacing-xl 0 0;
+    margin-top: auto;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.5fr;
+        gap: $spacing-xl;
+        padding-bottom: $spacing-xl;
+        border-bottom: 1px solid rgba($white, 0.1);
+    }
+
+    .footer-section {
+        h3 {
+            font-family: $font-secondary;
+            font-size: 2rem;
+            margin-bottom: $spacing-md;
+            background: linear-gradient(45deg, $white, $primary-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h4 {
+            font-family: $font-secondary;
+            font-size: 1.2rem;
+            margin-bottom: $spacing-md;
+            color: $white;
+        }
+
+        p {
+            color: rgba($white, 0.8);
+            max-width: 300px;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: $spacing-md;
+
+        .social-link {
+            color: $white;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $primary-pink;
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: $spacing-sm;
+
+        input {
+            background: rgba($white, 0.1);
+            border: none;
+            padding: $spacing-sm;
+            color: $white;
+            font-family: $font-primary;
+            width: 200px;
+
+            &:focus {
+                outline: 1px solid $primary-pink;
+            }
+        }
+
+        .btn-small {
+            padding: $spacing-sm $spacing-md;
+            background: $primary-pink;
+            border: none;
+            color: $white;
+            font-family: $font-primary;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $neon-pink;
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: $spacing-md 0;
+        text-align: center;
+        color: rgba($white, 0.6);
+        font-size: 0.9rem;
+    }
+}

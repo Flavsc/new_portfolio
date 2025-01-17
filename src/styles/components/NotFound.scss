@@ -1,0 +1,62 @@
+// src/styles/pages/NotFound.scss
+@import "../variables";
+
+.not-found {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-black;
+    color: $white;
+    padding: $spacing-xl;
+
+    &__content {
+        text-align: center;
+        max-width: 600px;
+
+        h1 {
+            font-size: 8rem;
+            font-weight: 900;
+            margin-bottom: $spacing-md;
+            font-family: $font-secondary;
+
+            @media (max-width: 768px) {
+                font-size: 6rem;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: $spacing-md;
+            color: $primary-pink;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: $spacing-xl;
+            opacity: 0.8;
+        }
+
+        .primary-button {
+            background: transparent;
+            border: 2px solid $primary-pink;
+            color: $white;
+            padding: $spacing-sm $spacing-xl;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $primary-pink;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px -5px rgba($primary-pink, 0.5);
+            }
+        }
+    }
+}

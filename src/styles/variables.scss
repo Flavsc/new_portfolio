@@ -1,0 +1,36 @@
+// Colors
+$primary-black: #0a0a0a;
+$primary-pink: #9900ff;
+$neon-pink: #df48fd;
+$white: #dbcde4;
+$gray: #2a262b;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $primary-pink, $neon-pink);
+$gradient-dark: linear-gradient(135deg, $primary-black, $gray);
+$gradient-glass: linear-gradient(135deg, rgba($white, 0.1), rgba($white, 0.05));
+
+// Typography
+$font-primary: "Outfit", sans-serif;
+$font-secondary: "Outfit", sans-serif;
+
+// Breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Effects
+$transition-fast: 0.3s ease-in-out;
+$transition-medium: 0.4s ease-in-out;
+$border-radius: 16px;
+$shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.1);
+$blur-effect: blur(12px);

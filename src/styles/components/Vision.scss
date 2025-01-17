@@ -1,0 +1,114 @@
+@import "../variables";
+@import "../animations";
+
+.vision {
+    padding: $spacing-xl * 2 0;
+    background: linear-gradient(
+        135deg,
+        $primary-black,
+        darken($primary-pink, 35%)
+    );
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+            circle at center,
+            rgba($primary-pink, 0.1) 0%,
+            transparent 50%
+        );
+        animation: rotate 40s linear infinite;
+        filter: blur(0.7);
+    }
+
+    .vision-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-xl;
+        position: relative;
+        z-index: 1;
+    }
+
+    .vision-card {
+        padding: $spacing-xl;
+        background: rgba($gray, 0.2);
+        border-radius: 24px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba($white, 0.1);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle at center,
+                rgba($primary-pink, 0.1),
+                transparent 70%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: $primary-pink;
+
+            &::before {
+                opacity: 1;
+                animation: rotate 10s linear infinite;
+            }
+
+            svg {
+                color: $primary-pink;
+                transform: scale(1.2) rotate(10deg);
+                filter: drop-shadow(0 0 10px rgba($primary-pink, 0.5));
+            }
+
+            h3 {
+                @extend .shimmer-text;
+            }
+        }
+
+        svg {
+            color: $white;
+            margin-bottom: $spacing-lg;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: $spacing-md;
+            color: $white;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        p {
+            color: rgba($white, 0.9);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

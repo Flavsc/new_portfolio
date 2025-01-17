@@ -1,0 +1,76 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    color: $white;
+    line-height: 1.6;
+    background-color: $primary-black;
+    overflow-x: hidden;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+
+    .accent {
+        color: $primary-pink;
+    }
+}
+
+.btn {
+    padding: $spacing-sm $spacing-lg;
+    border: 2px solid $primary-pink;
+    background: transparent;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    letter-spacing: 1px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary-pink;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $white;
+
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

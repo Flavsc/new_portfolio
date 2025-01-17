@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+    push:
+        branches:
+            - prod
+
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+            pull-requests: read
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "20.11.0"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build the project
+              run: npm run build
+
+            - name: Create CNAME file
+              run: echo "mazca.com.br" > ./dist/CNAME
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist

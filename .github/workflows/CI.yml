@@ -1,0 +1,35 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - dev
+            - homolog
+            - prod
+    pull_request:
+        branches:
+            - dev
+            - homolog
+            - prod
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Mazca repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "20.11.0"
+
+            - name: Install Mazca dependencies
+              run: npm ci
+
+            - name: Run linter
+              run: npm run lint:fix
+
+            - name: Build Mazca project
+              run: npm run build
