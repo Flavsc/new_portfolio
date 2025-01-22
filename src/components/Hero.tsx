@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-import React from "react";
 import "../styles/components/Hero.scss";
 import FloatingElements from "./3D/FloatingElements";
 import { ArrowRight, ChevronDown } from "lucide-react";
