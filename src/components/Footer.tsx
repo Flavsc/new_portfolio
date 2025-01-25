@@ -9,9 +9,7 @@ const Footer = () => {
             <div className="container footer-content">
                 <div className="footer-section">
                     <h3>166 studios</h3>
-                    <p>
-                        transforming your ideias into reality.
-                    </p>
+                    <p>transforming your ideias into reality.</p>
                 </div>
 
                 <div className="footer-section">

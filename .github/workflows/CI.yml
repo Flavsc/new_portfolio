@@ -25,11 +25,11 @@ jobs:
               with:
                   node-version: "20.11.0"
 
-            - name: Install Mazca dependencies
+            - name: Install 166studios dependencies
               run: npm ci
 
             - name: Run linter
               run: npm run lint:fix
 
-            - name: Build Mazca project
+            - name: Build 166studios project
               run: npm run build

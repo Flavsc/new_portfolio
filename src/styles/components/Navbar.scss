@@ -9,7 +9,7 @@
     transition: all 0.3s ease;
 
     &.scrolled {
-        background: rgba($primary-black, 0.95);
+        background: rgba($black, 0.95);
         backdrop-filter: blur(10px);
         box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
     }
@@ -58,12 +58,12 @@
                 left: 0;
                 width: 0;
                 height: 2px;
-                background: $primary-pink;
+                background: $primary;
                 transition: width 0.3s ease;
             }
 
             &:hover {
-                color: $primary-pink;
+                color: $primary;
 
                 &::after {
                     width: 100%;
@@ -98,7 +98,7 @@
 
         .auth-button {
             background: transparent;
-            border: 2px solid $primary-pink;
+            border: 2px solid $primary;
             color: $white;
             padding: $spacing-xs $spacing-md;
             border-radius: 20px;
@@ -107,9 +107,9 @@
             transition: all 0.3s ease;
 
             &:hover {
-                background: $primary-pink;
+                background: $primary;
                 transform: translateY(-2px);
-                box-shadow: 0 5px 15px -5px rgba($primary-pink, 0.5);
+                box-shadow: 0 5px 15px -5px rgba($primary, 0.5);
             }
         }
 
@@ -118,7 +118,7 @@
             transition: all 0.3s ease;
 
             &:hover {
-                color: $primary-pink;
+                color: $primary;
                 transform: scale(1.1);
             }
         }
@@ -131,7 +131,7 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 80px);
-        background: rgba($primary-black, 0.98);
+        background: rgba($black, 0.98);
         backdrop-filter: blur(10px);
         transform: translateY(-100%);
         opacity: 0;
@@ -168,12 +168,12 @@
                     left: 0;
                     width: 0;
                     height: 2px;
-                    background: $primary-pink;
+                    background: $primary;
                     transition: width 0.3s ease;
                 }
 
                 &:hover {
-                    color: $primary-pink;
+                    color: $primary;
 
                     &::after {
                         width: 100%;
@@ -202,8 +202,8 @@
     background: linear-gradient(
         to right,
         $white 20%,
-        $primary-pink 40%,
-        $primary-pink 60%,
+        $primary 40%,
+        $primary 60%,
         $white 80%
     );
     background-size: 200% auto;

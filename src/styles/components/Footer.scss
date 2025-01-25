@@ -18,7 +18,7 @@
             font-family: $font-secondary;
             font-size: 2rem;
             margin-bottom: $spacing-md;
-            background: linear-gradient(45deg, $white, $primary-pink);
+            background: linear-gradient(45deg, $white, $primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -45,7 +45,7 @@
             transition: all 0.3s ease;
 
             &:hover {
-                color: $primary-pink;
+                color: $primary;
                 transform: translateY(-2px);
             }
         }
@@ -64,13 +64,13 @@
             width: 200px;
 
             &:focus {
-                outline: 1px solid $primary-pink;
+                outline: 1px solid $primary;
             }
         }
 
         .btn-small {
             padding: $spacing-sm $spacing-md;
-            background: $primary-pink;
+            background: $primary;
             border: none;
             color: $white;
             font-family: $font-primary;
@@ -78,7 +78,7 @@
             transition: all 0.3s ease;
 
             &:hover {
-                background: $neon-pink;
+                background: $neon;
             }
         }
     }

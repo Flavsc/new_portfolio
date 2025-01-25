@@ -25,10 +25,10 @@
 @keyframes glow {
     0%,
     100% {
-        box-shadow: 0 0 20px rgba($primary-pink, 0.3);
+        box-shadow: 0 0 20px rgba($primary, 0.3);
     }
     50% {
-        box-shadow: 0 0 40px rgba($primary-pink, 0.6);
+        box-shadow: 0 0 40px rgba($primary, 0.6);
     }
 }
 
@@ -57,9 +57,9 @@
     background: linear-gradient(
         90deg,
         $white 0%,
-        $primary-pink 25%,
+        $primary 25%,
         $white 50%,
-        $primary-pink 75%,
+        $primary 75%,
         $white 100%
     );
     background-size: 200% auto;

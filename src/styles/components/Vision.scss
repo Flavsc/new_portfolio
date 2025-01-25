@@ -5,8 +5,8 @@
     padding: $spacing-xl * 2 0;
     background: linear-gradient(
         135deg,
-        $primary-black,
-        darken($primary-pink, 35%)
+        $black,
+        darken($primary, 35%)
     );
     position: relative;
     overflow: hidden;
@@ -18,7 +18,7 @@
         height: 200%;
         background: radial-gradient(
             circle at center,
-            rgba($primary-pink, 0.1) 0%,
+            rgba($primary, 0.1) 0%,
             transparent 50%
         );
         animation: rotate 40s linear infinite;
@@ -53,7 +53,7 @@
             height: 200%;
             background: radial-gradient(
                 circle at center,
-                rgba($primary-pink, 0.1),
+                rgba($primary, 0.1),
                 transparent 70%
             );
             opacity: 0;
@@ -62,7 +62,7 @@
 
         &:hover {
             transform: translateY(-10px) scale(1.02);
-            border-color: $primary-pink;
+            border-color: $primary;
 
             &::before {
                 opacity: 1;
@@ -70,9 +70,9 @@
             }
 
             svg {
-                color: $primary-pink;
+                color: $primary;
                 transform: scale(1.2) rotate(10deg);
-                filter: drop-shadow(0 0 10px rgba($primary-pink, 0.5));
+                filter: drop-shadow(0 0 10px rgba($primary, 0.5));
             }
 
             h3 {

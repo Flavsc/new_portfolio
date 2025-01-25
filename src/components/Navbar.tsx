@@ -26,7 +26,9 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="logo">
-                    <span className="logo-text gradient-text">166 studios.</span>
+                    <span className="logo-text gradient-text">
+                        166 studios.
+                    </span>
                 </div>
 
                 <div className="nav-links desktop-only">

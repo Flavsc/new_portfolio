@@ -1,5 +1,4 @@
 import "../styles/components/Hero.scss";
-import FloatingElements from "./3D/FloatingElements";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 const Hero = () => {
@@ -12,7 +11,6 @@ const Hero = () => {
 
     return (
         <section className="hero">
-            <FloatingElements />
             <div className="hero-content">
                 <h1 className="hero-title">
                     studios
