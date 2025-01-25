@@ -3,11 +3,7 @@
 
 .vision {
     padding: $spacing-xl * 2 0;
-    background: linear-gradient(
-        135deg,
-        $black,
-        darken($primary, 35%)
-    );
+    background: linear-gradient(135deg, $black, darken($primary, 35%));
     position: relative;
     overflow: hidden;
 
